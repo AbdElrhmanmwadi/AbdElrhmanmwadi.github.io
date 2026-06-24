@@ -15,7 +15,7 @@ const channels = [
   {
     icon: Github,
     label: "GitHub",
-    value: "@your-username",
+    value: "@AbdElrhmanmwadi",
     href: site.github,
   },
   {
