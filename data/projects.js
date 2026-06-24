@@ -1,42 +1,32 @@
-// Project cards. Replace the `github` and `demo` links with your real URLs.
+// Project cards — sourced from real GitHub repositories.
 export const projects = [
   {
-    title: "AI RAG Chatbot",
-    subtitle: "PDF + Knowledge Base",
+    title: "RAG Knowledge Engine",
+    subtitle: "Production RAG Backend with Agents & Voice",
     description:
-      "A retrieval-augmented chatbot that ingests PDFs and custom knowledge bases, embeds them into a vector store, and answers questions with cited, grounded responses — eliminating hallucinations on private data.",
-    tech: ["Python", "LangChain", "FAISS", "FastAPI", "OpenAI"],
-    github: "https://github.com/AbdElrhmanmwadi/ai-rag-chatbot",
+      "A production-grade FastAPI backend for document ingestion, RAG question answering, and a conversational agent with token-by-token SSE streaming. Vector search over PGVector/Qdrant, LLM generation via Cohere/OpenAI, JWT auth with Google sign-in, async translation, and a full voice loop (faster-whisper STT + Piper TTS) with automatic Arabic/English voice selection.",
+    tech: ["Python", "FastAPI", "PGVector", "Qdrant", "Cohere", "Whisper"],
+    github: "https://github.com/AbdElrhmanmwadi/rag-knowledge-engine",
     demo: "",
     featured: true,
   },
   {
-    title: "Voice AI Assistant",
-    subtitle: "Speech-to-Speech System",
+    title: "Voxora",
+    subtitle: "AI Voice, Translation & Communication Platform",
     description:
-      "A real-time voice assistant with a full speech-to-speech loop: Whisper transcribes the user, an LLM reasons over the request, and ElevenLabs streams a natural voice reply over WebRTC with low latency.",
-    tech: ["Whisper", "ElevenLabs", "WebRTC", "FastAPI", "Python"],
-    github: "https://github.com/AbdElrhmanmwadi/voice-ai-assistant",
-    demo: "",
+      "An AI platform for voice, translation, and smart communication — built as a Vite + React + TypeScript single-page app on top of the RAG Knowledge Engine. Delivers real-time conversational AI, document translation, and voice workflows through a clean, responsive web UI.",
+    tech: ["TypeScript", "React", "Vite", "Tailwind CSS"],
+    github: "https://github.com/AbdElrhmanmwadi/Voxora",
+    demo: "https://voxora-one.vercel.app",
     featured: true,
   },
   {
-    title: "Multi-Agent AI System",
-    subtitle: "Orchestrated with LangGraph",
+    title: "Knowledge Engine Mobile",
+    subtitle: "Flutter Client for the RAG Engine",
     description:
-      "A multi-agent workflow built on LangGraph where specialized agents (planner, researcher, critic, executor) collaborate through a shared state graph to solve complex tasks autonomously with built-in self-correction.",
-    tech: ["LangGraph", "LangChain", "Python", "ChromaDB"],
-    github: "https://github.com/AbdElrhmanmwadi/multi-agent-langgraph",
-    demo: "",
-    featured: true,
-  },
-  {
-    title: "Local LLM Chatbot",
-    subtitle: "Private & Offline with Ollama",
-    description:
-      "A fully local, privacy-first chatbot running open-source models through Ollama — no API keys, no data leaving the machine. Streaming responses with a clean web UI for offline AI experimentation.",
-    tech: ["Ollama", "Python", "FastAPI", "Llama 3"],
-    github: "https://github.com/AbdElrhmanmwadi/local-llm-ollama",
+      "A Flutter mobile client for the RAG Knowledge Engine backend, enabling file upload, semantic search, AI-powered question answering, and document translation on the go. Built with Riverpod state management, GoRouter navigation, and a Material 3 design, following a clean repository-pattern architecture.",
+    tech: ["Flutter", "Dart", "Riverpod", "GoRouter", "Dio"],
+    github: "https://github.com/AbdElrhmanmwadi/knowledge-engine-mobile",
     demo: "",
     featured: false,
   },
