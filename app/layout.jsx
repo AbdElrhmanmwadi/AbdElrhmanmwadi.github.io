@@ -9,7 +9,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://AbdElrhmanmwadi.github.io/portfolio";
+const siteUrl = "https://AbdElrhmanmwadi.github.io";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

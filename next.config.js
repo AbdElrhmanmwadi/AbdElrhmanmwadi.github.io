@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-// Set GITHUB_PAGES=true when building for a GitHub Pages project site
-// (e.g. https://username.github.io/portfolio). On Vercel leave it unset.
+// Set GITHUB_PAGES=true when building for GitHub Pages.
+// - User/org site  (repo named "<user>.github.io")  -> served at root, no basePath.
+// - Project site   (any other repo name)            -> served at /<repo>, needs basePath.
+// On Vercel, leave GITHUB_PAGES unset.
 const isGithubPages = process.env.GITHUB_PAGES === "true";
-const repoName = process.env.REPO_NAME || "portfolio";
+const repoName = process.env.REPO_NAME || "";
+const isUserSite = repoName.endsWith(".github.io");
+const useBasePath = isGithubPages && !isUserSite && repoName.length > 0;
 
 const nextConfig = {
   reactStrictMode: true,
@@ -16,8 +20,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // GitHub Pages serves a project site from a sub-path, so prefix assets.
-  ...(isGithubPages
+  // Project sites live under a sub-path, so prefix assets. User sites don't.
+  ...(useBasePath
     ? {
         basePath: `/${repoName}`,
         assetPrefix: `/${repoName}/`,
